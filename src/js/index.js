@@ -7,5 +7,21 @@ import "../assets/img/4geeks.ico";
 import "../style/index.scss";
 
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
+  function randjoao(max) {
+    return Math.floor(Math.random() * (max - 0));
+  }
+
+  let who = ["My Brother", "My girlfriend", "My pet dragon"];
+  let how = ["ripped my homework", "burned my homework", "lost my homework"];
+  let when = ["two days ago", "last week", "yesterday"];
+
+  let excusejoao = document.querySelector("#excuse");
+
+  excusejoao.innerHTML =
+    who[randjoao(who.length)] +
+    " " +
+    how[randjoao(how.length)] +
+    " " +
+    when[randjoao(when.length)] +
+    " ";
 };
